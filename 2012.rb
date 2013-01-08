@@ -9,8 +9,7 @@ def matches
 
   { :date => Date.new(2012, 2, 2) ,   :winners => ['Roel',       'Iain'],       :losers => ['Kees',         'Kevin'] },
   { :date => Date.new(2012, 2, 10),   :winners => ['Kris',       'Ewout'],      :losers => ['Brian',        'Jacobjob'] },
-  { :date => Date.new(2012, 2, 14),   :winners => ['Gert',       'Jacbo'],      :losers => ['Tom',          'Abdu'] },
-  { :date => Date.new(2012, 2, 14),   :winners => ['Gert',       'Jacbo'],      :losers => ['Tom',          'Abdu'] },
+  { :date => Date.new(2012, 2, 14),   :winners => ['Gert',       'Jacob'],      :losers => ['Tom',          'Abdu'] },
   { :date => Date.new(2012, 2, 16),   :winners => ['Hillebrand', 'Arne'],       :losers => ['Rob',          'Barry'] },
   { :date => Date.new(2012, 2, 17),   :winners => ['Roel',       'Iain'],       :losers => ['Robin',        'Kees'] },
   { :date => Date.new(2012, 2, 20),   :winners => ['Menno',      'Arie'],       :losers => ['Robin',        'Kees'] },
