@@ -114,7 +114,6 @@ def calculate_losses(team)
 end
 
 
-puts "=" * 100
 puts "Aantal 10-0 matches: #{matches.count}"
 puts "-" * 100
 
@@ -122,25 +121,26 @@ winning_teams.each do |winning_team|
   calculate_victories(winning_team)
 end
 
+puts ""
 puts "Team winst (bruto)"
 puts "-" * 100
 winning_teams_and_counts.sort_by { |team, score| score }.reverse.each do |team, score|
-  puts "#{team.join(" en ")} - #{score}"
+  puts "* #{team.join(" en ")} - #{score}"
 end
-puts "-" * 100
 
 losing_teams.each do |losing_team|
   calculate_losses(losing_team)
 end
 
+puts ""
 puts "Team verliezen"
 puts "-" * 100
 losing_teams_and_counts.sort_by { |team, score| score }.reverse.each do |team, score|
-  puts "#{team.join(" en ")} - #{score}"
+  puts "* #{team.join(" en ")} - #{score}"
 end
-puts "-" * 100
 
-puts "Team winst (netto)"
+puts ""
+puts "Team winst (minus verliezen)"
 puts "-" * 100
 @netto_team_scores = {}
 winning_teams_and_counts.each do |team, score|
@@ -149,9 +149,8 @@ winning_teams_and_counts.each do |team, score|
   @netto_team_scores[team] = netto
 end
 @netto_team_scores.sort_by { |team, score| score}.reverse.each do |team, score|
-  puts "#{team.join(" en ")} - #{score}"
+  puts "* #{team.join(" en ")} - #{score}"
 end
-puts "-" * 100
 
 def winning_people_and_counts
   @winning_people_and_counts ||= {}
@@ -187,21 +186,22 @@ losing_people.each do |person|
   calculate_personal_losses(person)
 end
 
+puts ""
 puts "Individuele winst (bruto)"
 puts "-" * 100
 winning_people_and_counts.sort_by { |person, score| score }.reverse.each do |person, score|
-  puts "#{person} - #{score}"
+  puts "* #{person} - #{score}"
 end
 
-puts "-" * 100
+puts ""
 puts "Individuele verliezen"
 puts "-" * 100
 losing_people_and_counts.sort_by { |person, score| score }.reverse.each do |person, score|
-  puts "#{person} - #{score}"
+  puts "* #{person} - #{score}"
 end
 
-puts "-" * 100
-puts "Individuele winst (netto)"
+puts ""
+puts "Individuele winst (minus verliezen)"
 puts "-" * 100
 @netto_people_scores = {}
 winning_people_and_counts.each do |person, score|
@@ -218,6 +218,5 @@ losing_people_and_counts.each do |person, score|
 end
 
 @netto_people_scores.sort_by { |person, score| score}.reverse.each do |person, score|
-  puts "#{person} - #{score}"
+  puts "* #{person} - #{score}"
 end
-puts "-" * 100
