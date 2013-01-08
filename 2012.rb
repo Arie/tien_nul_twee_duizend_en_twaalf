@@ -1,6 +1,7 @@
 require 'date'
 
-matches = [
+def matches
+  [
   { :date => Date.new(2012, 1, 5),    :winners => ['Danny',      'Iain'],       :losers => ['Quinten',      'Alex'] },
   { :date => Date.new(2012, 1, 11),   :winners => ['Danny',      'Menno'],      :losers => ['Andre',        'Lennaerd'] },
   { :date => Date.new(2012, 1, 23),   :winners => ['Hillebrand', 'Rob'],        :losers => ['Vincent',      'Maikel'] },
@@ -75,7 +76,141 @@ matches = [
 
   { :date => Date.new(2012, 12, 12),  :winners => ['Patrick',    'Hillebrand'], :losers => ['Rob',          'Iris'] },
   { :date => Date.new(2012, 12, 28),  :winners => ['Kris',       'Roel'],       :losers => ['Rob',          'Kees'] }
-]
+  ]
+end
 
 
+def winners_array
+  matches.map { |match| match[:winners].sort }
+end
+
+def losers_array
+  matches.map { |match| match[:losers].sort }
+end
+
+def winning_teams
+  winners_array.uniq.sort
+end
+
+def losing_teams
+  losers_array.uniq.sort
+end
+
+def winning_teams_and_counts
+  @winning_teams_and_counts ||= {}
+end
+
+def losing_teams_and_counts
+  @losing_teams_and_counts ||= {}
+end
+
+def calculate_victories(team)
+  win_count = winners_array.count { |winning_team| winning_team == team }
+  winning_teams_and_counts[team] = win_count
+end
+
+def calculate_losses(team)
+  loss_count = losers_array.count { |losing_team| losing_team == team }
+  losing_teams_and_counts[team] = loss_count
+end
+
+
+puts "=" * 100
 puts "Aantal 10-0 matches: #{matches.count}"
+puts "-" * 100
+
+winning_teams.each do |winning_team|
+  calculate_victories(winning_team)
+end
+
+puts "Team winst (bruto)"
+puts "-" * 100
+winning_teams_and_counts.sort_by { |team, score| score }.reverse.each do |team, score|
+  puts "#{team.join(" en ")} - #{score}"
+end
+puts "-" * 100
+
+losing_teams.each do |losing_team|
+  calculate_losses(losing_team)
+end
+
+puts "Team verliezen"
+puts "-" * 100
+losing_teams_and_counts.sort_by { |team, score| score }.reverse.each do |team, score|
+  puts "#{team.join(" en ")} - #{score}"
+end
+puts "-" * 100
+
+puts "Team winst (netto)"
+puts "-" * 100
+@netto_team_scores = {}
+winning_teams_and_counts.each do |team, score|
+  losses = losing_teams_and_counts[team].to_i
+  netto = score - losses
+  @netto_team_scores[team] = netto
+end
+@netto_team_scores.sort_by { |team, score| score}.reverse.each do |team, score|
+  puts "#{team.join(" en ")} - #{score}"
+end
+puts "-" * 100
+
+def winning_people_and_counts
+  @winning_people_and_counts ||= {}
+end
+
+def losing_people_and_counts
+  @losing_people_and_counts ||= {}
+end
+
+def calculate_personal_victories(person)
+  win_count = winners_array.count { |winning_team| winning_team[0] == person || winning_team[1] == person}
+  winning_people_and_counts[person] = win_count
+end
+
+def calculate_personal_losses(person)
+  loss_count = losers_array.count { |losing_team| losing_team[0] == person || losing_team[1] == person}
+  losing_people_and_counts[person] = loss_count
+end
+
+def winning_people
+  winners_array.flatten.uniq
+end
+
+def losing_people
+  losers_array.flatten.uniq
+end
+
+winning_people.each do |person|
+  calculate_personal_victories(person)
+end
+
+losing_people.each do |person|
+  calculate_personal_losses(person)
+end
+
+puts "Individuele winst (bruto)"
+puts "-" * 100
+winning_people_and_counts.sort_by { |person, score| score }.reverse.each do |person, score|
+  puts "#{person} - #{score}"
+end
+
+puts "-" * 100
+puts "Individuele verliezen"
+puts "-" * 100
+losing_people_and_counts.sort_by { |person, score| score }.reverse.each do |person, score|
+  puts "#{person} - #{score}"
+end
+
+puts "-" * 100
+puts "Individuele winst (netto)"
+puts "-" * 100
+@netto_people_scores = {}
+winning_people_and_counts.each do |person, score|
+  losses = losing_people_and_counts[person].to_i
+  netto = score - losses
+  @netto_people_scores[person] = netto
+end
+@netto_people_scores.sort_by { |person, score| score}.reverse.each do |person, score|
+  puts "#{person} - #{score}"
+end
+puts "-" * 100
