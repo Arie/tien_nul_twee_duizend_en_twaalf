@@ -148,6 +148,11 @@ winning_teams_and_counts.each do |team, score|
   netto = score - losses
   @netto_team_scores[team] = netto
 end
+losing_teams_and_counts.each do |team, score|
+  unless @netto_team_scores[team]
+    @netto_team_scores[team] = -1 * score
+  end
+end
 @netto_team_scores.sort_by { |team, score| score}.reverse.each do |team, score|
   puts "* #{team.join(" en ")} - #{score}"
 end

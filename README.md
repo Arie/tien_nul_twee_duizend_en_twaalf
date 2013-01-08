@@ -99,38 +99,85 @@ Team winst (minus verliezen)
 * Patrick en Robbert - 4
 * Hillebrand en Patrick - 3
 * Arie en Menno - 3
-* Brian en Patrick - 2
-* Jacob en Tom - 2
+* Gert en Jacbo - 2
 * Iain en Roel - 2
+* Gert en Tom - 2
+* Jacob en Tom - 2
+* Patrick en Rob - 2
 * Arne en Robbert - 2
 * Danny en Menno - 2
-* Patrick en Rob - 2
-* Gert en Jacbo - 2
-* Gert en Tom - 2
+* Brian en Patrick - 2
 * Ewout en Firas - 1
-* Hillebrand en Kolja - 1
-* Firas en Rob - 1
-* Ewout en Martin - 1
-* Ewout en Kris - 1
-* Gert en Quinten - 1
-* Hillebrand en Rob - 1
-* Danny en Kevin - 1
 * Danny en Jacques - 1
+* Danny en Kevin - 1
+* Auke en Jacques - 1
 * Danny en Iain - 1
+* Ewout en Kris - 1
+* Ewout en Martin - 1
+* Firas en Rob - 1
+* Arne en Hillebrand - 1
+* Gert en Quinten - 1
+* Arne en Firas - 1
+* Hillebrand en Kolja - 1
+* Arne en Brian - 1
+* Hillebrand en Rob - 1
+* Arie en Quinten - 1
+* Arie en Iain - 1
 * Jacob en Patrick - 1
-* Abdu en Robbert - 1
-* Andre en Jacobjob - 1
+* Andre en Samantha - 1
 * Jacques en Rob S - 1
 * Kris en Roel - 1
-* Arne en Hillebrand - 1
-* Arne en Firas - 1
-* Arne en Brian - 1
-* Arie en Quinten - 1
+* Andre en Jacobjob - 1
+* Abdu en Robbert - 1
 * Quinten en Robbert - 1
-* Arie en Iain - 1
-* Andre en Samantha - 1
-* Auke en Jacques - 1
+* Cakeboss en Iris - -1
+* Andre en Wietse - -1
+* Andre en Maikel - -1
+* Andre en Lennaerd - -1
+* Andre en Hillebrand - -1
+* Andre en Barry - -1
+* Alex en Quinten - -1
+* Menno en Robin - -1
+* Abdu en Ruben - -1
+* Abdu en Ronald - -1
+* Abdu en Gert - -1
+* Aswin en Edwin - -1
+* Aswin en Ewout - -1
+* Aswin en Gert - -1
+* Auke en Martin - -1
+* Barry en Edwin E - -1
+* Martin en Tom - -1
+* Barry en Martijn - -1
+* Barry en Quinten - -1
+* Martin en Robin - -1
+* Barry en Wietse - -1
+* Martin en Rob S - -1
+* Brian en Iris - -1
+* Brian en Jacobjob - -1
+* Maikel en Robbert - -1
+* Brian en Tom - -1
+* Martijn en Martin - -1
+* Diederick en Kees - -1
+* Diederick en Robin - -1
+* Edwin S en Ruben - -1
+* Gert en Martin - -1
+* Gert en Ruben - -1
+* Iris en Rob - -1
+* Iris en Rob K - -1
+* Jan en Martin - -1
+* Marco P en Martin - -1
+* Kees en Kevin - -1
+* Kees en Rob - -1
+* Maikel en Vincent - -1
+* Robin en Roel - -1
+* Brian en Jan - -2
+* Abdu en Tom - -2
+* Arne en Barry - -2
+* Barry en Rob - -2
+* Brian en Gerben - -2
+* Kees en Robin - -3
 * Barry en Patrick - -4
+* Barry en Hillebrand - -4
 
 Individuele winst (bruto)
 ----------------------------------------------------------------------------------------------------
