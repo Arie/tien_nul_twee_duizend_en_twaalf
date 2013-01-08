@@ -69,7 +69,6 @@ def matches
   { :date => Date.new(2012, 10, 25),  :winners => ['Firas',      'Arne'],       :losers => ['Andre',        'Hillebrand'] },
   { :date => Date.new(2012, 10, 29),  :winners => ['Patrick',    'Hillebrand'], :losers => ['Edwin',        'Aswin'] },
   { :date => Date.new(2012, 10, 30),  :winners => ['Robbert',    'Patrick'],    :losers => ['Cakeboss',     'Iris'] },
-  { :date => Date.new(2012, 10, 30),  :winners => ['Robbert',    'Patrick'],    :losers => ['Cakeboss',     'Iris'] },
 
   { :date => Date.new(2012, 11, 7),   :winners => ['Robbert',    'Patrick'],    :losers => ['Wietse',       'Barry'] },
   { :date => Date.new(2012, 11, 23),  :winners => ['Patrick',    'Barry'],      :losers => ['Brian',        'Tom'] },
@@ -210,6 +209,14 @@ winning_people_and_counts.each do |person, score|
   netto = score - losses
   @netto_people_scores[person] = netto
 end
+
+#Als je nooit gewonnen hebt sta je nog niet in het netto overzicht, voeg deze losers ook toe. Looking at you Robin
+losing_people_and_counts.each do |person, score|
+  unless @netto_people_scores[person]
+    @netto_people_scores[person] = -1 * score
+  end
+end
+
 @netto_people_scores.sort_by { |person, score| score}.reverse.each do |person, score|
   puts "#{person} - #{score}"
 end
