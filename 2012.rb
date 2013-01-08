@@ -3,7 +3,7 @@ require 'date'
 def matches
   [
   { :date => Date.new(2012, 1, 5),    :winners => ['Danny',      'Iain'],       :losers => ['Quinten',      'Alex'] },
-  { :date => Date.new(2012, 1, 11),   :winners => ['Danny',      'Menno'],      :losers => ['Andre',        'Lennaerd'] },
+  { :date => Date.new(2012, 1, 11),   :winners => ['Danny',      'Menno'],      :losers => ['Andre',        'Lennaert'] },
   { :date => Date.new(2012, 1, 23),   :winners => ['Hillebrand', 'Rob'],        :losers => ['Vincent',      'Maikel'] },
   { :date => Date.new(2012, 1, 27),   :winners => ['Patrick',    'Rob'],        :losers => ['Arne',         'Barry'] },
 

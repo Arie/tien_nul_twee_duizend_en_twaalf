@@ -83,7 +83,7 @@ Team verliezen
 * Robin en Roel - 1
 * Andre en Wietse - 1
 * Andre en Maikel - 1
-* Andre en Lennaerd - 1
+* Andre en Lennaert - 1
 * Andre en Hillebrand - 1
 * Andre en Barry - 1
 * Alex en Quinten - 1
@@ -133,7 +133,7 @@ Team winst (minus verliezen)
 * Cakeboss en Iris - -1
 * Andre en Wietse - -1
 * Andre en Maikel - -1
-* Andre en Lennaerd - -1
+* Andre en Lennaert - -1
 * Andre en Hillebrand - -1
 * Andre en Barry - -1
 * Alex en Quinten - -1
@@ -250,7 +250,7 @@ Individuele verliezen
 * Edwin E - 1
 * Vincent - 1
 * Edwin S - 1
-* Lennaerd - 1
+* Lennaert - 1
 * Menno - 1
 * Edwin - 1
 * Alex - 1
@@ -285,7 +285,7 @@ Individuele winst (minus verliezen)
 * Alex - -1
 * Marco P - -1
 * Ronald - -1
-* Lennaerd - -1
+* Lennaert - -1
 * Rob K - -1
 * Edwin S - -1
 * Vincent - -1
